@@ -1,0 +1,3 @@
+LEVER searches an AND/OR proof graph for a cheap correct proof, scoring partial proofs with realized costs plus priors on open goals so the objective guides search before a proof is done. Install with `pip install -e .`. Run `lever-demo`. Test with `python -m pytest -q`.
+
+This is the search, not the Lean agent. There is no Lean kernel, no LLM expander, and no PutnamBench run. Token prices are not modeled. A shared subgoal is charged to the first decomposition that introduced it, not once per use. A redraw happens when the incumbent objective is at least delta times the prior. The code is Python, not JAX.
